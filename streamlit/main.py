@@ -89,6 +89,6 @@ if st.button("Run"):
                          top_p=top_p,
                          do_sample=do_sample,
                          server_url=backend)
-        st.write(result["result"])
+        st.write(result["result"].replace("\n", "  \n"))
         st.text("English translation")
-        st.write(translate(result["result"], "en", "id"))
+        st.write(translate(result["result"], "en", "id").replace("\n", "  \n"))
